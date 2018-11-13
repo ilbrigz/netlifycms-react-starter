@@ -54,7 +54,7 @@ export default {
         path: '/',
         component: 'src/containers/Home',
         getData: () => ({
-          home: home[0];
+          home
         }),
       },
       {

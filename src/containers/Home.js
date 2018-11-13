@@ -5,7 +5,7 @@ import Markdown from 'react-markdown'
 import logoImg from '../logo.png'
 
 export default withRouteData(({home}) => {
-console.log(home)
+console.log(home[0])
 
 return (
 
