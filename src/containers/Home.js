@@ -6,8 +6,8 @@ import logoImg from '../logo.png'
 
 export default withRouteData(({home}) => (
   <div>
-    <h1 style={{ textAlign: 'center' }}>{home.data.title}</h1>
-    <img src={home.data.thumbnail} alt="" style={{ display: 'block', margin: '0 auto' }} />
+    <h1 style={{ textAlign: 'center' }}>{home.title}</h1>
+    <img src={home.thumbnail} alt="" style={{ display: 'block', margin: '0 auto' }} />
     <Markdown source={post.content} escapeHtml={false} />
   </div>
 ))
