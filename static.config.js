@@ -3,15 +3,15 @@ const klaw = require('klaw')
 const path = require('path')
 const matter = require('gray-matter')
 
-function getPosts () {
+function getPosts (path) {
   const items = []
   // Walk ("klaw") through posts directory and push file paths into items array //
-  const getFiles = () => new Promise(resolve => {
+  const getFiles = (path) => new Promise(resolve => {
     // Check if posts directory exists //
-    if (fs.existsSync('./src/posts')) {
-      klaw('./src/posts')
+    if (fs.existsSync()) {
+      klaw(path)
         .on('data', item => {
-          // Filter function to retrieve .md files //
+          // Filteunction to retrieve .md files //
           if (path.extname(item.path) === '.md') {
             // If markdown file, read contents //
             const data = fs.readFileSync(item.path, 'utf8')
@@ -47,11 +47,15 @@ export default {
     title: 'React Static with Netlify CMS',
   }),
   getRoutes: async () => {
-    const posts = await getPosts()
+    const posts = await getPosts('./src/posts'),
+    const home = await  getPosts('./src/home')
     return [
       {
         path: '/',
         component: 'src/containers/Home',
+        getData: () => ({
+          home,
+        }),
       },
       {
         path: '/about',
