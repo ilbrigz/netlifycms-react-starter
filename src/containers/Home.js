@@ -9,6 +9,6 @@ export default withRouteData(({home}) => (
   <div>
     <h1 style={{ textAlign: 'center' }}>{home}</h1>
 
-    <Markdown source={post.content} escapeHtml={false} />
+    <Markdown source={home.content} escapeHtml={false} />
   </div>
 ))
