@@ -47,7 +47,7 @@ export default {
     title: 'React Static with Netlify CMS',
   }),
   getRoutes: async () => {
-    const posts = await getPosts('./src/posts'),
+    const posts = await getPosts('./src/posts');
     const home = await  getPosts('./src/home')
     return [
       {
