@@ -27,6 +27,18 @@
   </script>
 </body>
 <script>
-CMS.registerPreviewTemplate("blog", <h1>hi there</h1>);
+  var PostPreview = createClass({
+  render: function() {
+    var entry = this.props.entry;
+    var image = entry.getIn(['data', 'image']);
+    var bg = this.props.getAsset(image);
+    return h('div', {},
+      h('h1', {}, entry.getIn(['data', 'title'])),
+      h('img', {src: bg.toString()}),
+      h('div', {"className": "text"}, this.props.widgetFor('body'))
+    );
+  }
+});
+CMS.registerPreviewTemplate("blog", PostPreview);
 </script>
 </html>
