@@ -48,13 +48,13 @@ export default {
   }),
   getRoutes: async () => {
     const posts = await getPosts('./src/posts');
-    const home = await  getPosts('./src/home')[0];
+    const home = await  getPosts('./src/home');
     return [
       {
         path: '/',
         component: 'src/containers/Home',
         getData: () => ({
-          home,
+          home: home[0];
         }),
       },
       {
