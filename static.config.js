@@ -3,13 +3,13 @@ const klaw = require('klaw')
 const path = require('path')
 const matter = require('gray-matter')
 
-function getPosts (path) {
+function getPosts (directory) {
   const items = []
   // Walk ("klaw") through posts directory and push file paths into items array //
   const getFiles = () => new Promise(resolve => {
     // Check if posts directory exists //
-    if (fs.existsSync(path)) {
-      klaw(path)
+    if (fs.existsSync(directory)) {
+      klaw(directory)
         .on('data', item => {
           // Filteunction to retrieve .md files //
           if (path.extname(item.path) === '.md') {
