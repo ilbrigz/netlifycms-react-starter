@@ -9,7 +9,7 @@ export default withRouteData(({home}) => {
 const {content, data} =(home[0])
 return (
 
-  <div style={backgroundColor:"red"}>
+  <div style={{backgroundColor:"red"}}>
   <h1 style={{ textAlign: 'center' }}>test</h1>
   <img src={data.image }alt=""/>
  <Markdown source={content} escapeHtml={false} />
