@@ -4,11 +4,14 @@ import Markdown from 'react-markdown'
 //
 import logoImg from '../logo.png'
 
-export default withRouteData(({home}) => (
+export default withRouteData(({home}) => {
+console.log(home)
+
+return (
 
   <div>
-    <h1 style={{ textAlign: 'center' }}>{home}</h1>
+    <h1 style={{ textAlign: 'center' }}>test</h1>
 
-    <Markdown source={home.content} escapeHtml={false} />
+
   </div>
-))
+)})
