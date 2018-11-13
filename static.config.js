@@ -48,7 +48,7 @@ export default {
   }),
   getRoutes: async () => {
     const posts = await getPosts('./src/posts');
-    const home = await  getPosts('./src/home')
+    const home = await  getPosts('./src/home')[0];
     return [
       {
         path: '/',
