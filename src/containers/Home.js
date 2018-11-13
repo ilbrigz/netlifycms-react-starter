@@ -5,13 +5,13 @@ import Markdown from 'react-markdown'
 import logoImg from '../logo.png'
 
 export default withRouteData(({home}) => {
-console.log(home[0])
 
+const {content, data} =(home[0])
 return (
 
   <div>
-    <h1 style={{ textAlign: 'center' }}>test</h1>
-
-
+  <h1 style={{ textAlign: 'center' }}>test</h1>
+  <img src="data.image" alt=""/>
+ <Markdown source={content} escapeHtml={false} />
   </div>
 )})
