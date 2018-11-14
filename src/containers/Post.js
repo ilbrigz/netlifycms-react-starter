@@ -2,10 +2,12 @@ import React from 'react'
 import { withRouteData, Link } from 'react-static'
 import Moment from 'react-moment'
 import Markdown from 'react-markdown'
-//
+  import {FacebookIcon,FacebookShareButton} from 'react-share';
 
 export default withRouteData(({ post }) => (
   <div className="blog-post">
+  {typeof window !== 'undefined' && <FacebookShareButton url={window.location.href}
+	><FacebookIcon></FacebookIcon></FacebookShareButton>}
     <Link to="/blog/">{'<'} Back</Link>
     <br />
     <h3>{post.data.title}</h3>
