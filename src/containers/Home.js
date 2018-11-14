@@ -8,7 +8,7 @@ import logoImg from '../logo.png'
 export default withRouteData(({home}) => {
 const {content, data} =(home[0])
 return (
-{(typeof window !== 'undefined') && <FacebookShareButton url={window.location.href}
+{typeof window !== 'undefined' && <FacebookShareButton url={window.location.href}
 	><FacebookIcon></FacebookIcon></FacebookShareButton>}
   <div>
   <h1 style={{ textAlign: 'center' }}>test</h1>
