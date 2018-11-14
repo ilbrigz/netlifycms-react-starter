@@ -10,7 +10,7 @@ const {content, data} =(home[0])
 return (
 
   <div>
- {window &&  <FacebookShareButton quote="the great brigs" url=window.location.href><FacebookIcon></FacebookIcon></FacebookShareButton>}
+ {window &&  <FacebookShareButton quote="the great brigs" url={window.location.href}><FacebookIcon></FacebookIcon></FacebookShareButton>}
   <h1 style={{ textAlign: 'center' }}>test</h1>
   <img src={data.image }alt=""/>
  <Markdown className="center is-100"  source={content} escapeHtml={false} />
