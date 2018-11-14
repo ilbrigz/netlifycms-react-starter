@@ -12,6 +12,6 @@ return (
   <div style={{backgroundColor:"red"}}>
   <h1 style={{ textAlign: 'center' }}>test</h1>
   <img src={data.image }alt=""/>
- <Markdown source={content} escapeHtml={false} />
+ <Markdown className="center is-100"  source={content} escapeHtml={false} />
   </div>
 )})

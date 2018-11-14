@@ -43,3 +43,7 @@ nav a {
  display: flex;
  flex-direction: column;
 }
+.is-100 {
+  width: 900px;
+  margin:0 auto;
+}
