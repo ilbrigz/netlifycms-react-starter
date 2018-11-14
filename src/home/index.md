@@ -6,6 +6,4 @@ brianna kay bati ug nawngasdfs fs
 
 batig nawng nga bata
 
-![asdf](/uploads/my_picture_id.jpg)
-
 asdfasdfasdfasf
