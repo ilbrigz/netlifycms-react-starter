@@ -10,7 +10,7 @@ const {content, data} =(home[0])
 return (
 
   <div>
-  {typeof window !== 'undefined' && <FacebookShareButton url={window.location.href}
+  {typeof window !== 'undefined' && <FacebookShareButton url="brigzdev.com"
 	><FacebookIcon></FacebookIcon></FacebookShareButton>}
   <h1 style={{ textAlign: 'center' }}>test</h1>
   <img src={data.image }alt=""/>
